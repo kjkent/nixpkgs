@@ -22,7 +22,7 @@
 postInstallHooks+=(copyDesktopItems)
 
 copyDesktopItems() {
-    if [ "${dontCopyDesktopItems-}" = 1 ]; then return; fi
+    if [ "$dontCopyDesktopItems" = 1 ]; then return; fi
 
     if [ -z "$desktopItems" ]; then
         return
